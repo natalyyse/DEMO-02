@@ -3,7 +3,7 @@ FROM php:8.1-apache
 #Intalar dependencias necesrias para postgreSQL
 RUN apt-get update && apt-get install -y \
     libpq-dev \
-    && docker-php-ext-install pdo pdo_pgsql pdo_pgsql
+    && docker-php-ext-install pgsql pdo_pgsql 
 
 #Copiar contenido de toda la app en mi contendor
 COPY . /var/www/html/
